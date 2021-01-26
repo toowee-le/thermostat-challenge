@@ -47,13 +47,20 @@ describe("Thermostat", function() {
     });
   });
 
-  describe("power saving mode is on", function() {
-    it("sets maximum temperate at 25 degrees", function() {
+  describe("set max temperature", function() {
+    it("sets max temperature at 25 degrees if PSM is on", function() {
       for(let i = 0; i < 5; i++) {
         thermostat.up();
       };
-
       expect(thermostat.getCurrentTemperature()).toEqual(25);
+    });
+
+    it("sets max temperature at 32 degrees if PSM is off", function() {
+      thermostat.switchPowerSavingModeOff();
+      for(let i = 0; i < 12; i++) {
+        thermostat.up();
+      };
+      expect(thermostat.getCurrentTemperature()).toEqual(32);
     });
   });
 });
