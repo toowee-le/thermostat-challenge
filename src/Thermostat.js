@@ -6,6 +6,7 @@ class Thermostat {
     this.temperature = this.DEFAULT_TEMPERATURE;
     this.MIN_TEMPERATURE = 10;
     this.psm = true;
+    this.PSM_MAX_TEMPERATURE = 25;
   };
 
   getCurrentTemperature() {
@@ -24,12 +25,20 @@ class Thermostat {
     return this.psm = true;
   }
 
+  isMaximumTemperature() {
+    return this.temperature === this.PSM_MAX_TEMPERATURE;
+  }
+
   isMinimumTemperature() {
     return this.temperature === this.MIN_TEMPERATURE;
   };
 
   up() {
-    this.temperature += 1;
+    if (this.isMaximumTemperature()) {
+      return;
+    } else {
+      this.temperature += 1;
+    };
   };
 
   down() {

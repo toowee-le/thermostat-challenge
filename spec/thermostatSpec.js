@@ -46,4 +46,14 @@ describe("Thermostat", function() {
       expect(thermostat.isPowerSavingModeOn()).toBe(true);
     });
   });
+
+  describe("power saving mode is on", function() {
+    it("sets maximum temperate at 25 degrees", function() {
+      for(let i = 0; i < 5; i++) {
+        thermostat.up();
+      };
+
+      expect(thermostat.getCurrentTemperature()).toEqual(25);
+    });
+  });
 });
