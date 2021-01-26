@@ -53,4 +53,8 @@ class Thermostat {
       this.temperature -= 1;
     }
   };
+
+  resetTemperature() {
+    this.temperature = this.DEFAULT_TEMPERATURE;
+  }
 };
