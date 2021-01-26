@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Jasmine Spec Runner v3.6.0</title>
+  <title>Thermostat</title>
 
   <link rel="shortcut icon" type="image/png" href="lib/jasmine-3.6.0/jasmine_favicon.png">
   <link rel="stylesheet" href="lib/jasmine-3.6.0/jasmine.css">
@@ -20,5 +20,32 @@
 </head>
 
 <body>
+  <section class="container">
+    <h1 class="title">Thermostat</h1>
+
+    <div class="inner-container">
+      <div class="power-saving-mode">
+        <p>Power Saving Mode</p>
+        <button class="psm-on">on</button>
+        <button class="psm-off">off</button>
+      </div>
+
+      <div class="display-temp">
+        <p class="temperature">20</p>
+      </div>
+
+      <div class="buttons">
+        <button class="temp-up">+</button>
+        <button class="temp-down">-</button>
+        <button class="temp-reset">reset</button>
+      </div>
+
+      <div class="energy-usage">
+        <p class="current-usage">low-usage</p>
+      </div>
+    </div>
+  </section>
+
+  <script src="src/Thermostat.js"></script>
 </body>
 </html>
