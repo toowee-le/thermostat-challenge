@@ -7,26 +7,29 @@ describe("Thermostat", function() {
     thermostat = new Thermostat();
   });
 
-  it("starts at 20 degrees", function() {
-    expect(thermostat.getCurrentTemperature()).toEqual(20);
+  describe("default temperature settings", function() {
+    it("starts at 20 degrees", function() {
+      expect(thermostat.getCurrentTemperature()).toEqual(20);
+    });
+
+    it("sets minimum temperature at 10 degrees", function() {
+      for(let i = 0; i < 10; i++) {
+        thermostat.down();
+      };
+      expect(thermostat.getCurrentTemperature()).toEqual(10);
+    });
   });
 
-  it("increases in temperature by 1", function() {
-    thermostat.up();
-    expect(thermostat.getCurrentTemperature()).toEqual(21);
-  });
-
-  it("decreases in temperature by 1", function() {
-    thermostat.down();
-    expect(thermostat.getCurrentTemperature()).toEqual(19);
-  });
-
-  it("set minimum temperature at 10 degrees", function() {
-    for(let i = 0; i < 10; i++) {
+  describe("change temperature", function() {
+    it("increases in temperature by 1", function() {
+      thermostat.up();
+      expect(thermostat.getCurrentTemperature()).toEqual(21);
+    });
+  
+    it("decreases in temperature by 1", function() {
       thermostat.down();
-    };
-
-    expect(thermostat.getCurrentTemperature()).toEqual(10);
+      expect(thermostat.getCurrentTemperature()).toEqual(19);
+    });  
   });
 
   describe("power saving mode", function() {
