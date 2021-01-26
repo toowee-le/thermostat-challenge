@@ -7,7 +7,7 @@ describe("Thermostat", function() {
     thermostat = new Thermostat();
   });
 
-  it("starts at 10 degrees", function() {
+  it("starts at 20 degrees", function() {
     expect(thermostat.getCurrentTemperature()).toEqual(20);
   });
 
@@ -21,5 +21,13 @@ describe("Thermostat", function() {
     thermostat.down();
 
     expect(thermostat.getCurrentTemperature()).toEqual(19);
+  });
+
+  it("set minimum temperature at 10 degrees", function() {
+    for(let i = 0; i < 10; i++) {
+      thermostat.down();
+    };
+
+    expect(thermostat.getCurrentTemperature()).toEqual(10);
   });
 });
