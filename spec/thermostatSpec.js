@@ -70,4 +70,25 @@ describe("Thermostat", function() {
       expect(thermostat.getCurrentTemperature()).toEqual(20);
     });
   });
+
+  describe("display energy usage", function() {
+    it("returns 'low-usage' if temperature is below 18 degrees", function() {
+      for (let i = 0; i < 3; i ++) {
+        thermostat.down();
+      };
+      expect(thermostat.energyUsage()).toEqual('low-usage');
+    });
+
+    it("returns 'medium-usage' if temperature is between 18 and 25 degrees", function() {
+      expect(thermostat.energyUsage()).toEqual('medium-usage');
+    });
+
+    it("returns 'high-usage' if temperature is above 25 degrees", function() {
+      thermostat.switchPowerSavingModeOff();
+      for (let i = 0; i < 6; i++) {
+        thermostat.up();
+      };
+      expect(thermostat.energyUsage()).toEqual('high-usage');
+    });
+  });
 });

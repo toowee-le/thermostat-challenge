@@ -8,6 +8,8 @@ class Thermostat {
     this.psm = true;
     this.MAX_TEMP_PSM_ON = 25;
     this.MAX_TEMP_PSM_OFF = 32;
+    this.LOW_ENERGY_LIMIT = 18;
+    this.MED_ENERGY_LIMIT = 25;
   };
 
   getCurrentTemperature() {
@@ -51,10 +53,20 @@ class Thermostat {
       return;
     } else {
       this.temperature -= 1;
-    }
+    };
   };
 
   resetTemperature() {
     this.temperature = this.DEFAULT_TEMPERATURE;
-  }
+  };
+
+  energyUsage() {
+    if (this.temperature < this.LOW_ENERGY_LIMIT) {
+      return "low-usage";
+    } else if (this.temperature <= this.MED_ENERGY_LIMIT) {
+      return "medium-usage";
+    } else {
+      return "high-usage";
+    };
+  };
 };
