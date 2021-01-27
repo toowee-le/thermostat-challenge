@@ -15,6 +15,9 @@
   <!-- include spec files here... -->
   <script src="spec/thermostatSpec.js"></script>
 
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+
 </head>
 
 <body>
@@ -23,11 +26,12 @@
 
     <div class="inner-container">
       <div class="display-temp">
-        <p class="temperature">20&#8451;</p>
+        <p class="temperature" id="temperature">20</p>
+        <span class="celcius">&#8451;</span>
       </div>
 
       <div class="energy-usage">
-        <p class="current-usage">low-usage</p>
+        <p class="current-usage">medium usage</p>
       </div>
 
       <div class="buttons">
@@ -45,6 +49,6 @@
   </section>
 
   <script src="src/Thermostat.js"></script>
-  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+  <script src="src/interface.js"></script>
 </body>
 </html>
