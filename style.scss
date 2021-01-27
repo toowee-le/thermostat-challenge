@@ -3,7 +3,6 @@
 $background-color: #5d9bc7;
 $thermostat-color: #89b6d6;
 $white: #fff;
-$green: #abe5b8;
 $font-family: 'Open Sans', sans-serif;
 
 body {
@@ -28,36 +27,48 @@ body {
   }
   .temperature {
     margin: 0;
-    font-size: 5rem;
+    font-size: 8rem;
   }
 
-  span {
+  .celcius {
     vertical-align: super;
-    font-size: 2rem;
+    font-size: 3rem;
+  }
+
+  .psm-on {
+    background: #A8E1B2;
+    border: 1px solid #A8E1B2;
+    border-radius: 3px;
+    text-transform: uppercase;
   }
 
   .temp-up,
   .temp-down,
   .temp-reset,
-  .psm-on,
   .psm-off {
     background: $white;
     border: 1px solid $white;
-    border-radius: 2px;
-    color: #000;
+    border-radius: 3px;
+    text-transform: uppercase;
     cursor: pointer;
 
     &:hover {
       background: darken($white, 10%);
+      border: 1px solid darken($white, 10%);
     }
   }
 
   .energy-usage > .current-usage {
     margin-top: 0;
-    color: $green;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 1px;
   }
 
-  .power-saving-mode > p {
-    padding-top: 1em;
+  .power-saving-mode {
+    & > p {
+      display: inline-block;
+      padding-top: .8em;
+    }
   }
 }
