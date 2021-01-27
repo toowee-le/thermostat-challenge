@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
+body {
+  text-align: center;
+  background-color: #5d9bc7;
+  color: #fff;
+  font-family: "Open Sans", sans-serif; }
+
+.inner-container {
+  width: 500px;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 1em;
+  background-color: #89b6d6;
+  border: 1px solid #fff;
+  border-radius: 20px; }
+  .inner-container .display-temp {
+    display: flex;
+    justify-content: center; }
+  .inner-container .temperature {
+    margin: 0;
+    font-size: 5rem; }
+  .inner-container span {
+    vertical-align: super;
+    font-size: 2rem; }
+  .inner-container .temp-up,
+  .inner-container .temp-down,
+  .inner-container .temp-reset,
+  .inner-container .psm-on,
+  .inner-container .psm-off {
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 2px;
+    color: #000;
+    cursor: pointer; }
+    .inner-container .temp-up:hover,
+    .inner-container .temp-down:hover,
+    .inner-container .temp-reset:hover,
+    .inner-container .psm-on:hover,
+    .inner-container .psm-off:hover {
+      background: #e6e6e6; }
+  .inner-container .energy-usage > .current-usage {
+    margin-top: 0;
+    color: #abe5b8; }
+  .inner-container .power-saving-mode > p {
+    padding-top: 1em; }
+
+/*# sourceMappingURL=style.css.map */

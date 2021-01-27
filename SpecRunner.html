@@ -6,13 +6,11 @@
 
   <link rel="shortcut icon" type="image/png" href="lib/jasmine-3.6.0/jasmine_favicon.png">
   <link rel="stylesheet" href="lib/jasmine-3.6.0/jasmine.css">
+  <link rel="stylesheet" href="style.css">
 
   <script src="lib/jasmine-3.6.0/jasmine.js"></script>
   <script src="lib/jasmine-3.6.0/jasmine-html.js"></script>
   <script src="lib/jasmine-3.6.0/boot.js"></script>
-
-  <!-- include source files here... -->
-  <script src="src/Thermostat.js"></script>
 
   <!-- include spec files here... -->
   <script src="spec/thermostatSpec.js"></script>
@@ -24,14 +22,12 @@
     <h1 class="title">Thermostat</h1>
 
     <div class="inner-container">
-      <div class="power-saving-mode">
-        <p>Power Saving Mode</p>
-        <button class="psm-on">on</button>
-        <button class="psm-off">off</button>
+      <div class="display-temp">
+        <p class="temperature">20&#8451;</p>
       </div>
 
-      <div class="display-temp">
-        <p class="temperature">20</p>
+      <div class="energy-usage">
+        <p class="current-usage">low-usage</p>
       </div>
 
       <div class="buttons">
@@ -40,12 +36,15 @@
         <button class="temp-reset">reset</button>
       </div>
 
-      <div class="energy-usage">
-        <p class="current-usage">low-usage</p>
+      <div class="power-saving-mode">
+        <p>Power Saving Mode:</p>
+        <button class="psm-on">on</button>
+        <button class="psm-off">off</button>
       </div>
     </div>
   </section>
 
   <script src="src/Thermostat.js"></script>
+  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
 </body>
 </html>
