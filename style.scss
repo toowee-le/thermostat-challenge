@@ -3,6 +3,7 @@
 $background-color: #5d9bc7;
 $thermostat-color: #89b6d6;
 $white: #fff;
+$green: #A8E1B2;
 $font-family: 'Open Sans', sans-serif;
 
 body {
@@ -10,6 +11,14 @@ body {
   background-color: $background-color;
   color: $white;
   font-family: $font-family;
+}
+
+button {
+  text-transform: uppercase;
+  background: $white;
+  border: 1px solid $white;
+  border-radius: 3px;
+  cursor: pointer;
 }
 
 .inner-container {
@@ -35,33 +44,18 @@ body {
     font-size: 3rem;
   }
 
-  .psm-on {
-    background: #A8E1B2;
-    border: 1px solid #A8E1B2;
-    border-radius: 3px;
-    text-transform: uppercase;
-  }
-
   .temp-up,
   .temp-down,
-  .temp-reset,
-  .psm-off {
-    background: $white;
-    border: 1px solid $white;
-    border-radius: 3px;
-    text-transform: uppercase;
-    cursor: pointer;
-
+  .temp-reset {
     &:hover {
       background: darken($white, 10%);
       border: 1px solid darken($white, 10%);
     }
   }
 
-  .energy-usage > .current-usage {
+  .current-usage {
     margin-top: 0;
     color: #000;
-    text-transform: uppercase;
     letter-spacing: 1px;
   }
 
@@ -69,6 +63,11 @@ body {
     & > p {
       display: inline-block;
       padding-top: .8em;
+    }
+
+    .green {
+      background: $green;
+      border: 1px solid $green;
     }
   }
 }

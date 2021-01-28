@@ -5,6 +5,13 @@ body {
   color: #fff;
   font-family: "Open Sans", sans-serif; }
 
+button {
+  text-transform: uppercase;
+  background: #fff;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  cursor: pointer; }
+
 .inner-container {
   width: 500px;
   max-width: 50%;
@@ -22,33 +29,20 @@ body {
   .inner-container .celcius {
     vertical-align: super;
     font-size: 3rem; }
-  .inner-container .psm-on {
-    background: #A8E1B2;
-    border: 1px solid #A8E1B2;
-    border-radius: 3px;
-    text-transform: uppercase; }
-  .inner-container .temp-up,
-  .inner-container .temp-down,
-  .inner-container .temp-reset,
-  .inner-container .psm-off {
-    background: #fff;
-    border: 1px solid #fff;
-    border-radius: 3px;
-    text-transform: uppercase;
-    cursor: pointer; }
-    .inner-container .temp-up:hover,
-    .inner-container .temp-down:hover,
-    .inner-container .temp-reset:hover,
-    .inner-container .psm-off:hover {
-      background: #e6e6e6;
-      border: 1px solid #e6e6e6; }
-  .inner-container .energy-usage > .current-usage {
+  .inner-container .temp-up:hover,
+  .inner-container .temp-down:hover,
+  .inner-container .temp-reset:hover {
+    background: #e6e6e6;
+    border: 1px solid #e6e6e6; }
+  .inner-container .current-usage {
     margin-top: 0;
     color: #000;
-    text-transform: uppercase;
     letter-spacing: 1px; }
   .inner-container .power-saving-mode > p {
     display: inline-block;
     padding-top: .8em; }
+  .inner-container .power-saving-mode .green {
+    background: #A8E1B2;
+    border: 1px solid #A8E1B2; }
 
 /*# sourceMappingURL=style.css.map */

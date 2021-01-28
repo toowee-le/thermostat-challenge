@@ -20,20 +20,14 @@ $(document).ready(function() {
 
   $('.psm-off').on('click', function() {
     thermostat.switchPowerSavingModeOff();
-    $('.psm-off').css('background', '#A8E1B2');
-    $('.psm-off').css('border', '1px solid #A8E1B2');
-    $('.psm-on').css('background', '#FFF');
-    $('.psm-on').css('border', '1px solid #FFF');
+    $('button.psm-off').toggleClass("green");
+    $('button.psm-on').removeClass("green");
   });
 
   $('.psm-on').on('click', function() {
     thermostat.switchPowerSavingModeOn();
-    $('.psm-status').text('on');
-    $('.psm-on').css('background', '#A8E1B2');
-    $('.psm-on').css('border', '1px solid #A8E1B2');
-    $('.psm-off').css('background', '#FFF');
-    $('.psm-off').css('border', '1px solid #FFF');
-
+    $('button.psm-on').toggleClass("green");
+    $('button.psm-off').removeClass("green");
   });
 
   function updateTemperature() {
