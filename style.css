@@ -15,6 +15,7 @@ button {
   cursor: pointer; }
 
 .title {
+  padding-top: 30px;
   font-weight: 300;
   letter-spacing: 1px; }
 
@@ -24,7 +25,7 @@ button {
   justify-content: center;
   width: 420px;
   height: 420px;
-  max-width: 50%;
+  max-width: 60%;
   margin: 0 auto;
   padding: 1em;
   background-color: #89b6d6;
@@ -53,5 +54,24 @@ button {
   .inner-container .power-saving-mode .green {
     background: #A8E1B2;
     border: 1px solid #A8E1B2; }
+
+.inner-weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  width: 400px;
+  max-width: 60%;
+  margin: 20px auto 0;
+  padding: 2px 0 4px;
+  background: #89b6d6;
+  border: 2px solid #fff;
+  border-radius: 10px; }
+  .inner-weather-container select {
+    cursor: pointer; }
+  .inner-weather-container .current-temperature {
+    margin: 0;
+    font-weight: 700;
+    font-size: 1.2rem; }
 
 /*# sourceMappingURL=style.css.map */

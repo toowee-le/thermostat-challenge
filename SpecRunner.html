@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="style.css">
 
   <script src="lib/jasmine-3.6.0/jasmine.js"></script>
-  <script src="lib/jasmine-3.6.0/jasmine-html.js"></script>
+  <!-- <script src="lib/jasmine-3.6.0/jasmine-html.js"></script> -->
   <script src="lib/jasmine-3.6.0/boot.js"></script>
 
   <!-- include spec files here... -->
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-  <section class="container">
+  <section class="thermostat-container">
     <h1 class="title">Thermostat <i class="las la-temperature-high"></i></h1>
 
     <div class="inner-container">
@@ -51,7 +51,24 @@
     </div>
   </section>
 
+  <section class="weather-container">
+    <div class="inner-weather-container">
+      <label>Choose location:
+        <select name="current-city" id="current-city">
+          <option value=""></option>
+          <option value="london">London</option>
+          <option value="paris">Paris</option>
+          <option value="toronto">Toronto</option>
+          <option value="tokyo">Tokyo</option>
+        </select>
+      </label>
+      <p class="current-temperature" id="current-temperature"></p>
+    </div>
+  </section>
+
+  <!-- JS files -->
   <script src="src/Thermostat.js"></script>
   <script src="src/interface.js"></script>
+  <script src="src/getWeather.js"></script>
 </body>
 </html>
