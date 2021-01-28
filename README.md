@@ -1,5 +1,5 @@
 # Thermostat Challenge
-Makers Week 5 challenge. Test drive a web application using Jasmine to build a simple thermostat that allows the user to set the temperature.
+Makers Week 8 challenge. Test drive a web application using Jasmine to build a simple thermostat that allows the user to set the temperature.
 
 
 ## Demo
