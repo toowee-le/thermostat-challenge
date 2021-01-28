@@ -10,25 +10,34 @@ button {
   background: #fff;
   border: 1px solid #fff;
   border-radius: 3px;
+  color: #1c1c1cb9;
+  font-weight: 700;
   cursor: pointer; }
 
+.title {
+  font-weight: 300;
+  letter-spacing: 1px; }
+
 .inner-container {
-  width: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 420px;
+  height: 420px;
   max-width: 50%;
   margin: 0 auto;
   padding: 1em;
   background-color: #89b6d6;
-  border: 1px solid #fff;
-  border-radius: 20px; }
+  border: 2px solid #fff;
+  border-radius: 50%; }
   .inner-container .display-temp {
     display: flex;
     justify-content: center; }
   .inner-container .temperature {
     margin: 0;
-    font-size: 8rem; }
+    font-size: 9rem; }
   .inner-container .celcius {
-    vertical-align: super;
-    font-size: 3rem; }
+    font-size: 1.5rem; }
   .inner-container .temp-up:hover,
   .inner-container .temp-down:hover,
   .inner-container .temp-reset:hover {
@@ -40,7 +49,7 @@ button {
     letter-spacing: 1px; }
   .inner-container .power-saving-mode > p {
     display: inline-block;
-    padding-top: .8em; }
+    padding-top: .9em; }
   .inner-container .power-saving-mode .green {
     background: #A8E1B2;
     border: 1px solid #A8E1B2; }
