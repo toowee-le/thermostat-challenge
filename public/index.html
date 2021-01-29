@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Thermostat</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles/style.css">
+
+  <!-- Line Awesome -->
+  <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
+
+  <!-- jQuery -->
+  <script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+  <section class="thermostat-container">
+    <h1 class="title">Thermostat <i class="las la-temperature-high"></i></h1>
+
+    <div class="inner-container">
+      <div class="display-temp">
+        <p class="temperature" id="temperature">20</p>
+        <span class="celcius">&#8451;</span>
+      </div>
+
+      <div class="energy-usage">
+        <p class="current-usage">medium usage</p>
+      </div>
+
+      <div class="buttons">
+        <button class="temp-up">+</button>
+        <button class="temp-down">-</button>
+        <button class="temp-reset">reset</button>
+      </div>
+
+      <div class="power-saving-mode">
+        <p>Power Saving Mode:</p>
+        <button class="psm-on green">on</button>
+        <button class="psm-off">off</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="weather-container">
+    <div class="inner-weather-container">
+      <label>Choose location:
+        <select name="current-city" id="current-city">
+          <option value=""></option>
+          <option value="london">London</option>
+          <option value="paris">Paris</option>
+          <option value="toronto">Toronto</option>
+          <option value="tokyo">Tokyo</option>
+        </select>
+      </label>
+      <p class="current-temperature" id="current-temperature"></p>
+    </div>
+  </section>
+
+  <!-- JS files -->
+  <script src="javascript/src/Thermostat.js"></script>
+  <script src="javascript/src/interface.js"></script>
+  <script src="javascript/src/getWeather.js"></script>
+  
+</body>
+</html>
