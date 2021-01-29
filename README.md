@@ -1,7 +1,6 @@
 # Thermostat Challenge
 Makers Week 8 challenge. Test drive a web application using Jasmine to build a simple thermostat that allows the user to set the temperature.
 
-
 ## Demo
 ![Thermostat Demo](demo.gif)
 
@@ -34,8 +33,14 @@ Makers Week 8 challenge. Test drive a web application using Jasmine to build a s
 - API:
   - [OpenWeatherMapAPI](https://openweathermap.org/current)
 
-## How to use
+## How to run the web app
 ```
 git clone https://github.com/toowee-le/thermostat-challenge.git
+open public/index.html
+```
+
+## How to run the test
+```
+cd public/javascript/src/Thermostat.js
 open SpecRunner.html
 ```
